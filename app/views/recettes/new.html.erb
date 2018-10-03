@@ -1,0 +1,20 @@
+<h1 class="col-sm-offset-2">Création d'une recette</h1>
+
+<%= form_for @recette do |f| %>
+
+    <p>
+        <%= f.label :Nom %><br/>
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :Description %><br/>
+        <%= f.text_field :description %>
+    </p>
+    <p>
+        <%= f.label :Etapes %><br/>
+        <%= f.text_field :etapes %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
