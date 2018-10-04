@@ -1,5 +1,13 @@
 <h1 class="col-sm-offset-2">Création d'une recette</h1>
 
+<% if @recette.errors.any? %>
+    <ul>
+        <% @recette.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+
 <%= form_for @recette do |f| %>
 
     <p>
