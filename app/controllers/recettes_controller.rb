@@ -37,6 +37,13 @@ class RecettesController < ApplicationController
          @recette = Recette.find(params[:id])
     end
     
+    def destroy
+        @recette = Recette.find(params[:id])
+        @recette.destroy
+        flash[:danger] = "Recette supprimée"
+        redirect_to recettes_path
+    end
+    
     private
     
     def recette_params

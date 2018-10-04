@@ -1,0 +1,79 @@
+$navbar-default-bg: #009900;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+    float: left;
+    color: white;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    }
+
+.navbar-default .navbar-nav > .dropdown > a:hover,
+.navbar-default .navbar-nav > .dropdown > a:focus,    
+.navbar-default .navbar-nav > .dropdown > a {
+ color: #ffffff;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    color: white;
+}
+
+.newindex {
+    color: white;
+}
+
+.jumbotron {
+    background-image: asset-url('healthy.jpg') ;
+    background-size: cover;
+    margin-top: 45px ;
+    color: #009900;
+    height: 550px;
+    
+}
+
+.jumbotron h1 {
+    margin-top: 190px;
+}
+
+
+.panel-title h2 {
+    text-align: center;
+}
+
+.article-description {
+    padding: 5px;
+}
+
+.article-actions {
+    float: left;
+}
+
+footer {
+    margin-top: 45px ;
+    padding-top: 5px;
+    border-top: 1px solid #009900 ;
+    
+}
+
+footer small {
+    float: left;
+    
+}
+
+footer ul {
+    float: right;
+    list-style: none;
+    
+}
+
+.list-group {
+    list-style: none;
+}
+
+
