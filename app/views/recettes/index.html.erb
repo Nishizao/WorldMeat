@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <h2>Liste des recettes</h2>
+        <p><%= link_to "créer nouvelle recette", new_recette_path, class: "btn btn-xs btn-primary" %></p>
+        <table class= "table">
+            <thead>
+               <tr>
+                    <th>Recette</th>
+                    <th>Ingredients</th>
+                    <th>Actions</th>
+                </tr> 
+            </thead>
+            
+            <% @recette.each do |article| %>
+            <tr>
+                <td><%= link_to article.title, recette_path(article) %></td>
+                <td><%= article.description %></td>
+                <td><%= link_to "Editer", edit_recette_path(article), class: "btn btn-xs btn-success" %></td>
+                <td><%= link_to "Supprimer", recette_path(article), method: :delete, class: "btn btn-xs btn-danger" %></td>
+            </tr>
+            <% end %>
+        </table>
+    </div>     
+</div>
+        

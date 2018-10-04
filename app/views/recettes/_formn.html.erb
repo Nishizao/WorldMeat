@@ -1,0 +1,41 @@
+<%= render 'shared/errors', obj: @recette %>
+
+<div class= "row" >
+    <%= form_for(@recette, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+        <div class="form-group">
+            <div class= "col-sm-2 control-label">
+                <%= f.label :Recette %>
+            </div>
+            <div class= "col-sm-8">
+                <%= f.text_field :title, class: "form-control", placeholder: "Nom de la recette" %>
+            </div>
+        </div>
+        <div class="form-group">
+           <div class= "col-sm-2 control-label">
+                <%= f.label :Ingredients %>
+            </div>
+            <div class= "col-sm-8">
+                 <%= f.text_area :description, class: "form-control", placeholder: "Ingrédients de la recette" %>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2 control-label">
+                <%= f.label :Etapes %>
+            </div>
+            <div class= "col-sm-8">
+                 <%= f.text_area :etapes, class: "form-control", placeholder: "Etape" %>
+            </div>
+            
+        </div>    
+        <div class="group-form">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input class="btn btn-success" type="submit" value="créer">
+            </div>
+        </div>
+    
+    <% end %>
+</div>
+</br>
+<div class="col-sm-offset-2 col-sm-10">
+    <%= link_to "retour à la liste", recettes_path %>
+</div>

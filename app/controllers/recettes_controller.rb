@@ -1,5 +1,9 @@
 class RecettesController < ApplicationController
     
+    def index
+       @recette = Recette.all 
+    end
+    
     def new
         @recette = Recette.new
     end
