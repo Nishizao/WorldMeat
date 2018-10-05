@@ -24,7 +24,16 @@ $navbar-default-bg: #009900;
     color: white;
 }
 
-.newindex {
+.indexbtn .btn {
+    color: white;
+}
+
+.retour .btn {
+    float: right;
+    color: white;
+}
+
+.table .btn {
     color: white;
 }
 
@@ -38,7 +47,7 @@ $navbar-default-bg: #009900;
 }
 
 .jumbotron h1 {
-    margin-top: 190px;
+    margin-top: 150px;
 }
 
 
@@ -52,6 +61,11 @@ $navbar-default-bg: #009900;
 
 .article-actions {
     float: left;
+    padding-left: 50px;
+}
+
+.article-actions .btn {
+    color: white;
 }
 
 footer {

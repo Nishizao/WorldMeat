@@ -23,19 +23,20 @@
                 <%= f.label :Etapes %>
             </div>
             <div class= "col-sm-8">
-                 <%= f.text_area :etapes, class: "form-control", placeholder: "Etape" %>
+                 <%= f.text_area :etapes, class: "form-control", placeholder: "Etapes" %>
             </div>
             
         </div>    
         <div class="group-form">
-            <div class="col-sm-offset-2 col-sm-10">
+            <div class="col-sm-offset-5 col-sm-8">
                 <input class="btn btn-success" type="submit" value="créer">
             </div>
         </div>
     
     <% end %>
 </div>
-</br>
-<div class="col-sm-offset-2 col-sm-10">
-    <%= link_to "retour à la liste", recettes_path %>
+<div class="col-sm-10">
+    <div class= "retour">
+        <%= link_to "Retour à la liste", recettes_path, class: "btn btn-xs btn-primary" %>
+    </div>
 </div>
