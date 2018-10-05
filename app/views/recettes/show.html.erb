@@ -1,15 +1,16 @@
 <div class="row">
     <div class="col-xs-offset-2">
         <h2><%= @recette.title %></h2>
-    </div>    
-    <div class="well col-xs-8 col-xs-offset-2">
+    </div> 
+    
+    <div class="col-xs-8 col-xs-offset-2">
         <div class="article-description">
-                <%= @recette.etapes %>
+                <%= @recette.description %>
         </div>
     </div>
     <div class="article-actions">
         <div class="col-xs-offset-8 col-xs-12">
-            <%= link_to "Editer l'étape", edit_recette_path(@recette), class: "btn btn-xs btn-success" %>
+            <%= link_to "Editer la recette", edit_recette_path(@recette), class: "btn btn-xs btn-success" %>
             <%= link_to "Supprimer la recette", recette_path(@recette), method: :delete, class: "btn btn-xs btn-danger" %>
             <%= link_to "Retour à la liste", recettes_path, class: "btn btn-xs btn-primary" %>
         </div>
