@@ -7,6 +7,7 @@
                <tr>
                     <th>Recette</th>
                     <th>Ingredients</th>
+                    <th>Créateur</th>
                     <th>Actions</th>
                 </tr> 
             </thead>
@@ -15,6 +16,7 @@
             <tr>
                 <td><%= link_to recette.title, recette_path(recette) %></td>
                 <td><%= recette.description %></td>
+                <td><%= recette.user.username if recette.user %></td>
                 <td><%= link_to "Editer", edit_recette_path(recette), class: "btn btn-xs btn-success" %></td>
                 <td><%= link_to "Supprimer", recette_path(recette), method: :delete, class: "btn btn-xs btn-danger" %></td>
             </tr>
