@@ -1,18 +1,24 @@
 <div class="row">
-    <div class="col-xs-offset-2">
-        <h2><%= @recette.title %></h2>
+    <div class="col-xs-offset-1 col-xs-10 center">
+        <h2><%= @recette.title %></h2></br>
     </div> 
     
-    <div class="col-xs-8 col-xs-offset-2">
+    <div class="well col-xs-offset-1 col-xs-10">
         <div class="article-description">
                 <%= @recette.description %>
         </div>
-    </div>
-    <div class="article-actions">
-        <div class="col-xs-offset-8 col-xs-12">
-            <%= link_to "Editer la recette", edit_recette_path(@recette), class: "btn btn-xs btn-success" %>
-            <%= link_to "Supprimer la recette", recette_path(@recette), method: :delete, class: "btn btn-xs btn-danger" %>
-            <%= link_to "Retour à la liste", recettes_path, class: "btn btn-xs btn-primary" %>
+        
+        <div class="article-actions col-xs-12 center">
+            <%= gravatar_for @recette.user, size:40 %>
+            <small>créé par <%= link_to @recette.user.username, user_path(@recette.user) %></small>
         </div>
-    </div>
+    
+        <div class="article-actions col-xs-12">
+            <div align="center">
+                <%= link_to "Editer la recette", edit_recette_path(@recette), class: "btn btn-xs btn-success" %>
+                <%= link_to "Supprimer la recette", recette_path(@recette), method: :delete, class: "btn btn-xs btn-danger" %>
+                <%= link_to "Retour à la liste", recettes_path, class: "btn btn-xs btn-primary" %>
+            </div>
+        </div>
+    </div>    
 </div>

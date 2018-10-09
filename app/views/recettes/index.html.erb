@@ -2,26 +2,7 @@
     <div class="col-xs-8 col-xs-offset-2">
         <h2 align="center">Liste des recettes</h2></br></br>
         
-        <table class= "table">
-            <thead>
-               <tr>
-                    <th>Recette</th>
-                    <th>Ingredients</th>
-                    <th>Créateur</th>
-                    <th>Actions</th>
-                </tr> 
-            </thead>
-            
-            <% @recette.each do |recette| %>
-            <tr>
-                <td><%= link_to recette.title, recette_path(recette) %></td>
-                <td><%= recette.description %></td>
-                <td><%= recette.user.username if recette.user %></td>
-                <td><%= link_to "Editer", edit_recette_path(recette), class: "btn btn-xs btn-success" %></td>
-                <td><%= link_to "Supprimer", recette_path(recette), method: :delete, class: "btn btn-xs btn-danger" %></td>
-            </tr>
-            <% end %>
-        </table>
+        <%= render 'recettes', obj: @recette %>
     </div>     
 </div>
         
