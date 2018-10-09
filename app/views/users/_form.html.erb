@@ -1,35 +1,35 @@
-<%= render 'shared/errors', obj: @recette %>
+<%= render 'shared/errors', obj: @user %>
 
 <div class= "row" >
-    <%= form_for(@recette, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
         <div class="form-group">
             <div class= "col-sm-2 control-label">
-                <%= f.label :Recette %>
+                <%= f.label :Email %>
             </div>
             <div class= "col-sm-8">
-                <%= f.text_field :title, class: "form-control", placeholder: "Nom de la recette" %>
+                <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
             </div>
         </div>
         <div class="form-group">
            <div class= "col-sm-2 control-label">
-                <%= f.label :Ingredients %>
+                <%= f.label :Identifant %>
             </div>
             <div class= "col-sm-8">
-                 <%= f.text_area :description, class: "form-control", placeholder: "Ingrédients de la recette" %>
+                 <%= f.text_field :username, class: "form-control", placeholder: "Identifiant" %>
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-2 control-label">
-                <%= f.label :Etapes %>
+                <%= f.label :'Mot de passe' %>
             </div>
             <div class= "col-sm-8">
-                 <%= f.text_area :etapes, class: "form-control", placeholder: "Etapes" %>
+                 <%= f.password_field :password, class: "form-control", placeholder: "Mot de passe" %>
             </div>
             
         </div>    
         <div class="group-form">
             <div class="col-sm-offset-5 col-sm-8">
-                <input class="btn btn-success" type="submit" value="créer">
+                 <%= f.submit(@user.new_record? ? "Créer" : "Mettre à jour", class: "btn btn-success") %>
             </div>
         </div>
     

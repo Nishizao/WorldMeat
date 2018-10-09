@@ -47,7 +47,7 @@ class RecettesController < ApplicationController
     
     private
     
-    def set_article
+    def set_recette
         @recette = Recette.find(params[:id])
     end
     def recette_params
