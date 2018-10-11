@@ -5,11 +5,19 @@
     
     <div class="well col-xs-offset-1 col-xs-10">
         <div class="article-description">
-                <%= @recette.description %>
+        <table class="table table-bordered">
+              <tr align="center">
+                <th>Ingrédients</th>
+                <th>Etapes</th>
+              </tr>
+              <tr align="center">
+                <td><%= @recette.ingredients %></td>
+                <td><%= @recette.etapes %></td>
+              </tr>
         </div>
         
         <div class="article-actions col-xs-12 center">
-            <%= gravatar_for @recette.user, size:40 %>
+            <%= gravatar_for @recette.user, size:50 %>
             <small>créé par <%= link_to @recette.user.username, user_path(@recette.user) %></small>
         </div>
     

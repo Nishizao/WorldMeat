@@ -1,0 +1,29 @@
+<h2 align="center">Se connecter</h2></br>
+
+<div class= "row">
+    <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+        <div class="col-sm-offset-2">
+            <div class="form-group">
+                <div class= "col-sm-2 control-label">
+                    <%= f.label :Email %>
+                </div>
+                <div class= "col-sm-6">
+                    <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+                </div>
+            </div></br>
+            <div class="form-group">
+                <div class="col-sm-2 control-label">
+                    <%= f.label :'Mot de passe' %>
+                </div>
+                <div class= "col-sm-6">
+                     <%= f.password_field :password, class: "form-control", placeholder: "Mot de passe", autocomplete: "off" %>
+                </div>
+            </div></br>    
+            <div class="group-form">
+                <div class="col-sm-offset-4 col-sm-8">
+                     <%= f.submit "Se connecter", class: "btn btn-success" %>
+                </div>
+            </div>
+        </div>
+    <% end %>    
+</div>        

@@ -12,12 +12,21 @@
         </div>
         <div class="form-group">
            <div class= "col-sm-2 control-label">
-                <%= f.label :Ingredients %>
+                <%= f.label :Description %>
             </div>
             <div class= "col-sm-8">
-                 <%= f.text_area :description, class: "form-control", placeholder: "Ingrédients de la recette" %>
+                 <%= f.text_area :description, class: "form-control", placeholder: "Description" %>
             </div>
         </div>
+        <div class="form-group">
+            <div class="col-sm-2 control-label">
+                <%= f.label :'Ingrédients' %>
+            </div>
+            <div class= "col-sm-8">
+                 <%= f.text_area :ingredients, class: "form-control", placeholder: "Ingrédients" %>
+            </div>
+            
+        </div>  
         <div class="form-group">
             <div class="col-sm-2 control-label">
                 <%= f.label :Etapes %>

@@ -23,6 +23,10 @@ td {
  color: #ffffff;
 }
 
+#connec {
+    color: white;
+}
+
 .center {
     text-align: center;
 }
@@ -31,8 +35,12 @@ td {
     color: white;
 }
 
-.table {
-    
+.table .table-bordered {
+   margin: 15px; 
+}
+
+.table .btn {
+    color: white;
 }
 
 .indexbtn .btn {
@@ -42,10 +50,6 @@ td {
 
 .retour .btn {
     float: right;
-    color: white;
-}
-
-.table .btn {
     color: white;
 }
 
@@ -59,7 +63,7 @@ td {
 }
 
 .jumbotron h1 {
-    margin-top: 150px;
+    margin-top: 180px;
 }
 
 .jumbotron .btn {
@@ -86,9 +90,13 @@ td {
 }
 
 footer {
-    margin-top: 45px ;
+    position: fixed;
+    left: 10px;
+    bottom: 0;
+    width: 99%;
+    margin-top: 45px;
     padding-top: 5px;
-    border-top: 1px solid #009900 ;
+    border-top: 1px solid #009900;
     
 }
 
