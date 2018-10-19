@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     
     def destroy
         session[:user_id] = nil
-        flash[:success] = "Déconection réussie"
+        flash[:success] = "Déconnection réussie"
         redirect_to root_path
     end
     

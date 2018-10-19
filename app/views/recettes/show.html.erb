@@ -17,14 +17,16 @@
         </div>
         
         <div class="article-actions col-xs-12 center">
-            <%= gravatar_for @recette.user, size:50 %>
-            <small>créé par <%= link_to @recette.user.username, user_path(@recette.user) %></small>
+            
+            <small>créé par <%= link_to @recette.user.username, user_path(@recette.user) if @recette.user %></small>
         </div>
     
         <div class="article-actions col-xs-12">
             <div align="center">
-                <%= link_to "Editer la recette", edit_recette_path(@recette), class: "btn btn-xs btn-success" %>
-                <%= link_to "Supprimer la recette", recette_path(@recette), method: :delete, class: "btn btn-xs btn-danger" %>
+                <% if logged_in? and current_user == @recette.user %>
+                    <%= link_to "Editer la recette", edit_recette_path(@recette), class: "btn btn-xs btn-success" %>
+                    <%= link_to "Supprimer la recette", recette_path(@recette), method: :delete, class: "btn btn-xs btn-danger" %>
+                <% end %>
                 <%= link_to "Retour à la liste", recettes_path, class: "btn btn-xs btn-primary" %>
             </div>
         </div>

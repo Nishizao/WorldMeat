@@ -1,5 +1,7 @@
 class RecettesController < ApplicationController
     before_action :set_recette, only: [:edit, :update, :show, :destroy]
+    before_action :require_user, exept: [:index, :show]
+    before_action :require_same_user, only: [:edit, :update, :destroy]
     
     def index
        @recette = Recette.paginate(:page => params[:page], :per_page => 5)
@@ -16,6 +18,7 @@ class RecettesController < ApplicationController
         
     def create
         @recette = Recette.new(recette_params)
+        @recette.user = current_user
         if @recette.save
             flash[:success] = "Recette ajoutée"
             redirect_to recette_path(@recette)
@@ -46,6 +49,13 @@ class RecettesController < ApplicationController
     end
     
     private
+    
+    def require_same_user
+       if current_user != @recette.user_id
+          flash[:danger] = "Vous n'êtes pas le créateur de la recette, action impossible."
+          redirect_to root_path
+       end
+    end
     
     def set_recette
         @recette = Recette.find(params[:id])

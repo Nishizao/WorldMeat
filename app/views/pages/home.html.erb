@@ -8,11 +8,18 @@
   </style>
   <body>
 <div class="center container">
-  <div class="jumbotron">
-  <h1>World meat</h1>
-  <p>Bienvenue sur World meat, le blog des recettes du monde</p>
-  <p><%= link_to "s'inscrire", signup_path, class: "btn btn-success btn-lg" %></p>
-  </div>
+  <% if not logged_in? %>
+    <div class="jumbotron">
+    <h1>World meat</h1>
+    <p>Bienvenue sur World meat, le blog des recettes du monde</p>
+    <p><%= link_to "s'inscrire", signup_path, class: "btn btn-success btn-lg" %></p>
+    </div>
+  <% else %>
+    <div class="jumbotron">
+    <h1>World meat</h1>
+    <p>Bienvenue sur World meat, le blog des recettes du monde</p>
+    </div>
+  <% end %>
 </div>
   </body>
 </html>
